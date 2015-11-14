@@ -18,7 +18,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <link rel='stylesheet' id='blank-canvas' href='<?php echo get_template_directory_uri(); ?>/style.css'
           type='text/css' media='all'/>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
 </head>
 

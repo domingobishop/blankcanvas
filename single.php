@@ -4,15 +4,6 @@
         <?php $bcimage = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
     <?php endif; ?>
 
-    <div class="bc-banner" <?php if ($bcimage) {
-        echo 'style="background-image: url(' . $bcimage[0] . ');background-size:cover;"';
-    } ?>>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12"></div>
-            </div>
-        </div>
-    </div>
     <div id="content" class="bc-content" role="main">
     <div class="container">
     <div class="row">
