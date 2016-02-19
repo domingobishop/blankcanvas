@@ -20,16 +20,17 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif, sansserif;
 	/*The weights are 300 (light), 400 (normal), 600 (semibold), and 700 (bold) and the only acceptable CSS keyword is "normal". */
 	text-rendering: optimizeLegibility;
-	color: #555;
+	color: #222;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.6;
 }
 html, button, input, select, textarea {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Code Pro', 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
-    font-weight: 900;
+    font-family: 'Arvo', 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
+    font-weight: 700;
+    color: #000;
 }
 a {
 	color: #000;
@@ -101,109 +102,63 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
  * ----------------------------------------------------------------------------
  */
 
-.main-navigation ul > li {
-	display: block;
-	float: left;
-	position: relative;
-	list-style: none;
-	padding: 18.5px 15px 20.5px;
-}
-.main-navigation ul > li > a {
-	line-height: 21px;
-}
-.main-navigation ul > li > a:hover, .main-navigation ul > li > a:focus {
-	text-decoration: none;
-	color: #ffffff;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-brand:hover {
-	color: #3399ff;
-}
 .navbar {
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 500;
 	border-radius: 0;
-	background-color: rgba(0,0,0,.5);
+	background-color: #fff;
+    box-shadow: 0px 5px 14px #ddd;
 }
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+.navbar-default .navbar-brand {
+    font-weight: 700;
+    color: #000;
+}
+
 /**
  * Header
  * ----------------------------------------------------------------------------
  */
- 
-header {
-	background-color: #eee;
-}
-.bc-banner {
-	background-color: #444;
-	padding-top: 100px;
-	padding-bottom: 60px;
-}
-.intro-text {
-    text-align: center;
-	color: #fff;
-}
-.action {
-	margin: 20px 0;
+
+.page header, .single header {
+    margin-bottom: 2em;
 }
 
-@media (max-width: 960px) {
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 643px) {
-}
-/**
- * Main
- * ----------------------------------------------------------------------------
- */
- 
-.bc-main {
-	margin-bottom: 40px;
-}
 /**
  * Footer
  * ----------------------------------------------------------------------------
  */
  
 footer {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding: 1em 0;
 	background-color: #eee;
 }
 footer .bc-info {
-	padding: 20px;
-	margin-top: 20px;
+	padding: 1em;
 }
 footer ul {
 	list-style-type: none;
 	padding: 0;
 }
+
 /**
- * Home
+ * Index
  * ----------------------------------------------------------------------------
  */
 
-.bc-home h1 {
-
+.bc-banner {
+    background-color: #eee;
+    margin-bottom: 2em;
 }
-.bc-post-loop-wrap article {
-    margin: 30px 0 60px 0;
+.intro-banner {
+    text-align: center;
+    color: #000;
 }
-.bc-intro {
-	background-color: #eee;
-}
-.bc-about {
-	background-color: #fff;
-}
-.bc-featured {
-	background-color: #eee;
-}
-.bc-post-loop {
-	background-color: #fff;
-}
-.widget-panel {
-	padding: 36px 0;
+.bc-post-loop article {
+    margin-bottom: 2em;
 }
 
 
@@ -211,18 +166,15 @@ footer ul {
  * Page & Posts
  * ----------------------------------------------------------------------------
  */
- 
- .entry-thumbnail {
- 	margin-top: 36px
- }
 
- 
+.bc-content {
+    margin-bottom: 2em;
+}
 
 /**
  * Sidebar & Widgets
  * ----------------------------------------------------------------------------
  */
-
 
 
  /**
