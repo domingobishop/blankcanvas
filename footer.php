@@ -10,8 +10,6 @@
   </div>
 </footer>
 <!-- #foot -->
-</div>
-<!-- #page -->
 
 <?php wp_footer(); ?>
 

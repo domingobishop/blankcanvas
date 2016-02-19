@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<main id="main" class="bc-main">
 <?php while (have_posts()) : the_post(); ?>
     <?php if (has_post_thumbnail() && !post_password_required()) : ?>
         <?php $bcimage = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
