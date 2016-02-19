@@ -1,8 +1,26 @@
 <?php
+
+// Enqueue styles and scripts
+function bc_styles() {
+    wp_register_style( 'bc-styles', get_template_directory_uri() . '/style.css', array(), 1.0, 'all' );
+    wp_register_style( 'google-fonts',
+        'https://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,700,400italic', array(), 1.0, 'all' );
+    wp_enqueue_style( 'bc-styles' );
+    wp_enqueue_style( 'google-fonts' );
+}
+add_action( 'wp_enqueue_scripts', 'bc_styles' );
+
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
   register_nav_menu( 'primary', __( 'Navigation Menu', 'blankcanvas' ) );
 }
+
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($more) {
+    global $post;
+    return '<br><a class="btn btn-default btn-xs" role="button" href="'. get_permalink($post->ID) . '">Read more &raquo;</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 function bc_wp_title( $title, $sep ) {
     global $paged, $page;
