@@ -1,6 +1,3 @@
-</main>
-<!-- #main -->
-
 <footer id="footer" class="bc-footer">
   <div class="container">
     <div class="row bc-info">
@@ -26,4 +23,5 @@
 
 <!-- BC JavaScript --> 
 <script src="<?php echo get_template_directory_uri(); ?>/js/bc.js"></script>
-</body></html>
+</body>
+</html>
