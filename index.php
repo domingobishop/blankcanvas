@@ -3,8 +3,8 @@
 <div class="bc-banner">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-text">
+            <div class="col-md-12">
+                <div class="intro-banner">
                     <h1>
                         <?php bloginfo('name'); ?>
                     </h1>
@@ -17,47 +17,9 @@
         </div>
     </div>
 </div>
-<div id="content" class="bc-home bc-content" role="main">
-    <?php if (is_active_sidebar('sidebar-4')) { ?>
-        <section id="bc-intro" class="bc-intro bc-panel">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="widget-panel">
-                            <?php dynamic_sidebar('sidebar-4'); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php } ?>
-    <?php if (is_active_sidebar('sidebar-5')) { ?>
-        <section id="bc-about" class="bc-about bc-panel">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="widget-panel">
-                            <?php dynamic_sidebar('sidebar-5'); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php } ?>
-    <?php if (is_active_sidebar('sidebar-6')) { ?>
-        <section id="bc-featured" class="bc-featured bc-panel">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="widget-panel">
-                            <?php dynamic_sidebar('sidebar-6'); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php } ?>
-    <section id="bc-post-loop" class="bc-post-loop bc-panel">
+<main id="main" class="bc-main" role="main">
+<div id="content" class="bc-content">
+    <section id="post-loop" class="bc-post-loop">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -73,14 +35,14 @@
                                             </a>
                                         </div>
                                     <?php endif; ?>
-                                    <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark">
+                                    <h1 class="entry-title">
+                                        <a href="<?php the_permalink(); ?>" rel="bookmark">
                                             <?php the_title(); ?>
-                                        </a></h1>
-
+                                        </a>
+                                    </h1>
                                     <div class="entry-summary">
                                         <?php the_excerpt(); ?>
                                     </div>
-                                    <!-- .entry-summary -->
                                 </article>
                             <?php endwhile; ?>
                         <?php else : ?>
@@ -91,15 +53,14 @@
                                 <li class="previous"><?php next_posts_link(__('&#8249; Older posts', 'blankcanvas')); ?></li>
                                 <li class="next"><?php previous_posts_link(__('Newer posts &#8250;', 'blankcanvas')); ?></li>
                             </ul>
-                            <!-- end of .navigation -->
                         </nav>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- #post-loop -->
 </div>
 <!-- #content -->
+</main>
 
 <?php get_footer(); ?>

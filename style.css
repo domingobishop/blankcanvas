@@ -119,6 +119,7 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
 	color: #3399ff;
 }
 .navbar {
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 500;
 	border-radius: 0;
@@ -134,10 +135,8 @@ header {
 }
 .bc-banner {
 	background-color: #444;
-	padding-top: 100px;
-	padding-bottom: 60px;
 }
-.intro-text {
+.intro-banner {
     text-align: center;
 	color: #fff;
 }
