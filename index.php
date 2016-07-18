@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="banner-title">
+                    <div class="banner-title text-center">
                         <h1>
                             <?php bloginfo('name'); ?>
                         </h1>

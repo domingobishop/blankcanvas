@@ -71,7 +71,7 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
 	font-weight: 500;
 	border-radius: 0;
 	background-color: #fff;
-    box-shadow: 0px 5px 14px #ddd;
+    box-shadow: 0px 5px 14px #444;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
@@ -112,9 +112,9 @@ footer .bc-info {
 
 .bc-banner {
     background-color: #eee;
+	background-size: cover;
 }
 .banner-title {
-    text-align: center;
     color: #000;
 }
 .loop-wrap article {
@@ -138,7 +138,11 @@ footer .bc-info {
  * Page & Posts
  * ----------------------------------------------------------------------------
  */
-
+.page .banner-title h1, .single .banner-title h1 {
+	margin: 2em 0;
+	padding: 0.5em 1em;
+	background: #fff;
+}
 .bc-content {
     padding: 2em 0;
 }
