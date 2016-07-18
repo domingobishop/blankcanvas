@@ -6,10 +6,8 @@ Description:    A 'blank canvas' with Bootstrap for developing WordPress themes.
 Author URI:     http://chrisbishop.me.uk/
 Version:        0.1.0
 License:		Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes.
-Text Domain: blankcanvas
+Text Domain:    blankcanvas
 */
-
-@import url("css/bootstrap.min.css");
 
 /**
  * Global
@@ -20,57 +18,28 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif, sansserif;
 	/*The weights are 300 (light), 400 (normal), 600 (semibold), and 700 (bold) and the only acceptable CSS keyword is "normal". */
 	text-rendering: optimizeLegibility;
-	color: #222;
-	font-size: 16px;
+	color: #444;
+	font-size: 18px;
 	line-height: 1.6;
 }
 html, button, input, select, textarea {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Arvo', 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
     font-weight: 700;
     color: #000;
 }
 a {
 	color: #000;
 }
-p a {
-	font-weight: 600;
-}
 a:hover, a:focus {
-	color: #000;
+	color: #3b94d9;
 }
-table {
-	border-bottom: 1px solid #ededed;
-	border-collapse: collapse;
-	border-spacing: 0;
-	font-size: 1em;
-	line-height: 2;
-	margin: 0 0 20px;
-	width: 100%;
+.entry-content a {
+	text-decoration: underline;
 }
-
-caption,
-th,
-td {
-	font-weight: normal;
-	text-align: left;
-}
-
-caption {
-	font-size: 1em;
-	margin: 20px 0;
-}
-
-th {
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-td {
-	border-top: 1px solid #ededed;
-	padding: 6px 10px 6px 0;
+.entry-content a:hover, .entry-content a:focus {
+	text-decoration: none;
 }
 
 /**
@@ -108,14 +77,31 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
 	font-weight: 500;
 	border-radius: 0;
 	background-color: #fff;
-    box-shadow: 0px 5px 14px #ddd;
+    box-shadow: 0px 5px 14px #444;
+}
+.navbar-nav>li>a {
+	padding-bottom: 15.5px;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
+	border-bottom: solid 4px #fff;
 }
 .navbar-default .navbar-brand {
     font-weight: 700;
     color: #000;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #3b94d9;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	border-bottom: solid 4px #3b94d9;
+}
+.navbar-default .navbar-nav > li.current-menu-item > a {
+	border-bottom: solid 4px #3b94d9;
 }
 
 /**
@@ -123,9 +109,7 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
  * ----------------------------------------------------------------------------
  */
 
-.page header, .single header {
-    margin-bottom: 2em;
-}
+
 
 /**
  * Footer
@@ -134,14 +118,14 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
  
 footer {
 	padding: 1em 0;
-	background-color: #eee;
-}
-footer .bc-info {
-	padding: 1em;
+	background-color: #e4eaea;
 }
 footer ul {
 	list-style-type: none;
 	padding: 0;
+}
+footer .bc-info {
+	padding: 1em;
 }
 
 /**
@@ -150,15 +134,38 @@ footer ul {
  */
 
 .bc-banner {
-    background-color: #eee;
-    margin-bottom: 2em;
+	background: url('img/bg.jpg') #e4eaea center center;
+	background-size: cover;
 }
-.intro-banner {
-    text-align: center;
+.home .banner-title {
     color: #000;
+	margin: 2em 0 3em;
+	padding: 0.5em 1em;
+	background: #fff;
 }
-.bc-post-loop article {
+.loop-wrap article {
     margin-bottom: 2em;
+}
+.loop-wrap .entry-content-loop {
+	padding: 1em;
+	background-color: #e4eaea;
+}
+.loop-wrap .entry-thumbnail {
+	max-height: 200px;
+	overflow: hidden;
+}
+.pager li>a, .pager li>span {
+	background-color: #95a5a6;
+	border-radius: 3px;
+}
+.pager li>a:hover,
+.pager li>a:focus,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open>.dropdown-toggle.btn-default {
+	background-color: #3b94d9;
 }
 
 
@@ -166,9 +173,13 @@ footer ul {
  * Page & Posts
  * ----------------------------------------------------------------------------
  */
-
+.page .banner-title h1, .single .banner-title h1 {
+	margin: 2em 0;
+	padding: 0.5em 1em;
+	background: #fff;
+}
 .bc-content {
-    margin-bottom: 2em;
+    padding: 2em 0;
 }
 
 /**
