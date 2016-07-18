@@ -12,6 +12,16 @@ function bc_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'bc_styles' );
 
+function bc_scripts() {
+    wp_register_script( 'jquery-js', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), '2.2.4' );
+    wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.6', true );
+    wp_register_script( 'global-js', get_template_directory_uri() . '/js/bc.js', array(), '1.0', true );
+    wp_enqueue_script( 'jquery-js' );
+    wp_enqueue_script( 'bootstrap-js' );
+    wp_enqueue_script( 'global-js' );
+}
+add_action( 'wp_enqueue_scripts', 'bc_scripts' );
+
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
   register_nav_menu( 'primary', __( 'Navigation Menu', 'blankcanvas' ) );
