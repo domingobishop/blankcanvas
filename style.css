@@ -6,7 +6,7 @@ Description:    A 'blank canvas' with Bootstrap for developing WordPress themes.
 Author URI:     http://chrisbishop.me.uk/
 Version:        0.1.0
 License:		Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes.
-Text Domain: blankcanvas
+Text Domain:    blankcanvas
 */
 
 /**
@@ -118,7 +118,7 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
  
 footer {
 	padding: 1em 0;
-	background-color: #eee;
+	background-color: #e4eaea;
 }
 footer ul {
 	list-style-type: none;
@@ -134,7 +134,7 @@ footer .bc-info {
  */
 
 .bc-banner {
-	background: url('img/bg.jpg') #eee center center;
+	background: url('img/bg.jpg') #e4eaea center center;
 	background-size: cover;
 }
 .home .banner-title {
@@ -148,7 +148,7 @@ footer .bc-info {
 }
 .loop-wrap .entry-content-loop {
 	padding: 1em;
-	background-color: #eee;
+	background-color: #e4eaea;
 }
 .loop-wrap .entry-thumbnail {
 	max-height: 200px;
