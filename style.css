@@ -9,8 +9,6 @@ License:		Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.o
 Text Domain: blankcanvas
 */
 
-@import url("css/bootstrap.min.css");
-
 /**
  * Global
  * ----------------------------------------------------------------------------
@@ -28,49 +26,14 @@ html, button, input, select, textarea {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Arvo', 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
     font-weight: 700;
     color: #000;
 }
 a {
 	color: #000;
 }
-p a {
-	font-weight: 600;
-}
 a:hover, a:focus {
-	color: #000;
-}
-table {
-	border-bottom: 1px solid #ededed;
-	border-collapse: collapse;
-	border-spacing: 0;
-	font-size: 1em;
-	line-height: 2;
-	margin: 0 0 20px;
-	width: 100%;
-}
-
-caption,
-th,
-td {
-	font-weight: normal;
-	text-align: left;
-}
-
-caption {
-	font-size: 1em;
-	margin: 20px 0;
-}
-
-th {
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-td {
-	border-top: 1px solid #ededed;
-	padding: 6px 10px 6px 0;
+	color: orange;
 }
 
 /**
@@ -123,9 +86,7 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
  * ----------------------------------------------------------------------------
  */
 
-.page header, .single header {
-    margin-bottom: 2em;
-}
+
 
 /**
  * Footer
@@ -136,12 +97,12 @@ footer {
 	padding: 1em 0;
 	background-color: #eee;
 }
-footer .bc-info {
-	padding: 1em;
-}
 footer ul {
 	list-style-type: none;
 	padding: 0;
+}
+footer .bc-info {
+	padding: 1em;
 }
 
 /**
@@ -151,14 +112,25 @@ footer ul {
 
 .bc-banner {
     background-color: #eee;
-    margin-bottom: 2em;
 }
-.intro-banner {
+.banner-title {
     text-align: center;
     color: #000;
 }
-.bc-post-loop article {
+.loop-wrap article {
     margin-bottom: 2em;
+}
+.loop-wrap .entry-content {
+	padding: 1em;
+	background-color: #eee;
+}
+.loop-wrap .entry-thumbnail {
+	max-height: 200px;
+	overflow: hidden;
+}
+.pager li>a, .pager li>span {
+	background-color: #95a5a6;
+	border-radius: 3px;
 }
 
 
@@ -168,7 +140,7 @@ footer ul {
  */
 
 .bc-content {
-    margin-bottom: 2em;
+    padding: 2em 0;
 }
 
 /**
