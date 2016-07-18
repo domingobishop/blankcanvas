@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
     <div class="bc-banner" role="banner">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="banner-title text-center">
+                <div class="col-md-6">
+                    <div class="banner-title">
                         <h1>
                             <?php bloginfo('name'); ?>
                         </h1>
@@ -33,7 +33,7 @@
                                                     </a>
                                                 </div>
                                             <?php endif; ?>
-                                            <div class="entry-content">
+                                            <div class="entry-content-loop">
                                                 <h1 class="entry-title">
                                                     <a href="<?php the_permalink(); ?>" rel="bookmark">
                                                         <?php the_title(); ?>
