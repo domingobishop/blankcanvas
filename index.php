@@ -34,11 +34,11 @@
                                                 </div>
                                             <?php endif; ?>
                                             <div class="entry-content-loop">
-                                                <h1 class="entry-title">
+                                                <h2 class="entry-title">
                                                     <a href="<?php the_permalink(); ?>" rel="bookmark">
                                                         <?php the_title(); ?>
                                                     </a>
-                                                </h1>
+                                                </h2>
                                                 <div class="entry-summary">
                                                     <p><?php echo excerpt(32) ; ?></p>
                                                 </div>
