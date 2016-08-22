@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="bc-banner" role="banner">
+    <div id="banner" class="bc-banner" role="banner">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
