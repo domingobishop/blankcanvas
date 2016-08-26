@@ -2,7 +2,7 @@
 
 // Enqueue styles and scripts
 function bc_styles() {
-    wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), 1.0, 'all' );
+    wp_register_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7', 'all' );
     wp_register_style( 'bc-styles', get_template_directory_uri() . '/style.css', array(), 1.0, 'all' );
     wp_register_style( 'google-fonts',
         'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic', array(), 1.0, 'all' );
@@ -14,7 +14,7 @@ add_action( 'wp_enqueue_scripts', 'bc_styles' );
 
 function bc_scripts() {
     wp_register_script( 'jquery-js', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), '2.2.4' );
-    wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.6', true );
+    wp_register_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7', true );
     wp_register_script( 'global-js', get_template_directory_uri() . '/js/bc.js', array(), '1.0', true );
     wp_enqueue_script( 'jquery-js' );
     wp_enqueue_script( 'bootstrap-js' );
