@@ -76,6 +76,7 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
 	text-transform: uppercase;
 	font-weight: 500;
 	border-radius: 0;
+	border: none;
 	background-color: #fff;
     box-shadow: 0px 5px 14px #444;
 }
@@ -129,7 +130,7 @@ footer .bc-info {
 }
 
 /**
- * Index
+ * Home
  * ----------------------------------------------------------------------------
  */
 
@@ -161,6 +162,8 @@ footer .bc-info {
 .pager li>a, .pager li>span {
 	background-color: #95a5a6;
 	border-radius: 3px;
+	border: none;
+	color: #fff;
 }
 .pager li>a:hover,
 .pager li>a:focus,
