@@ -138,11 +138,12 @@ footer .bc-info {
 	background: url('img/bg.jpg') #e4eaea center center;
 	background-size: cover;
 }
-.home .banner-title {
+.banner-title {
     color: #000;
 	margin: 2em 0 3em;
 	padding: 0.5em 1em;
 	background: #fff;
+	border-radius: 3px;
 }
 .loop-wrap article {
     margin-bottom: 2em;
@@ -182,20 +183,10 @@ footer .bc-info {
  * Page & Posts
  * ----------------------------------------------------------------------------
  */
-.page .banner-title h1, .single .banner-title h1 {
-	margin: 2em 0;
-	padding: 0.5em 1em;
-	background: #fff;
-}
+
 .bc-content {
     padding: 2em 0;
 }
-
-/**
- * Sidebar & Widgets
- * ----------------------------------------------------------------------------
- */
-
 
  /**
  * Images
