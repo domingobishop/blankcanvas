@@ -137,6 +137,7 @@ footer .bc-info {
 .bc-banner {
 	background: url('img/bg.jpg') #e4eaea center center;
 	background-size: cover;
+	min-height: 180px;
 }
 .banner-title {
     color: #000;
@@ -204,6 +205,9 @@ footer .bc-info {
   margin-right: 0px;
   float: right;
 }
+.entry-content img.alignnone  {
+    margin: 1.6em 0;
+}
 .wp-caption.alignright, img.alignright {
 	margin: 5px 0 5px 20px;
 }
@@ -219,4 +223,9 @@ footer .bc-info {
   font-size: 14px;
   font-style: italic;
   font-weight: 300;
+    padding: 1em;
+    background: #eee;
+}
+iframe {
+    margin: 1.6em 0;
 }

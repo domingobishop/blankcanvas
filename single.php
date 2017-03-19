@@ -10,11 +10,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="banner-title">
-                        <h1>
-                            <?php the_title(); ?>
-                        </h1>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -25,6 +21,11 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                <div class="entry-header">
+                                    <h1>
+                                        <?php the_title(); ?>
+                                    </h1>
+                                </div>
                                 <div class="entry-content">
                                     <?php the_content(); ?>
                                 </div>
