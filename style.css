@@ -27,10 +27,9 @@ html, button, input, select, textarea {
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    color: #000;
 }
 a {
-	color: #000;
+	color: #337ab7;
 }
 a:hover, a:focus {
 	color: #3b94d9;
@@ -140,14 +139,16 @@ footer .bc-info {
 	min-height: 180px;
 }
 .banner-title {
-    color: #000;
 	margin: 2em 0 3em;
 	padding: 0.5em 1em;
-	background: #fff;
+	background: rgba(255,255,255,0.8);
 	border-radius: 3px;
 }
 .cat-nav {
 	margin-bottom: 1em;
+}
+.cat-nav .btn {
+	margin-bottom: 0.5em;
 }
 .loop-wrap article {
     margin-bottom: 2em;

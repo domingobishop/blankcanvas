@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
     <div id="banner" class="bc-banner" role="banner">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="banner-title">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="banner-title text-center">
                         <h1>
                             <?php bloginfo('name'); ?>
                         </h1>
