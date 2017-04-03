@@ -18,28 +18,37 @@
     </div>
     <main id="main" class="bc-main" role="main">
         <div id="content" class="bc-content">
-                <div class="container">
+                <?php $categories = get_categories( array(
+                    'orderby' => 'name',
+                    'parent'  => 0
+                ) );
+                if ($categories) { ?>
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-12 text-center">
                             <div class="cat-nav">
-                                <?php $categories = get_categories( array(
-                                    'orderby' => 'name',
-                                    'parent'  => 0
-                                ) );
-
-                                foreach ( $categories as $category ) {
-                                    if ( is_category( $category ) ) {
-                                        $current_category = 'btn-primary';
-                                    } else {
-                                        $current_category = '';
-                                    }
+                            <?php
+                            foreach ( $categories as $category ) {
+                                if ( is_category( $category ) ) {
+                                    $current_category = 'btn-primary';
+                                } else {
+                                    $current_category = '';
+                                }
+                                if ( $category->name !== 'Uncategorized' && $category->name !== 'Uncategorised' ) {
                                     printf( '<a href="%1$s" class="btn btn-default ' . $current_category . '">%2$s</a> ',
                                         esc_url( get_category_link( $category->term_id ) ),
                                         esc_html( $category->name )
                                     );
-                                } ?>
+                                }
+                            } ?>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <?php }
+                ?>
+                <div class="container">
+                    <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <div class="loop-wrap">
                                 <?php if (have_posts()) : ?>

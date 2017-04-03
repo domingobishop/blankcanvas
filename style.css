@@ -146,6 +146,9 @@ footer .bc-info {
 	background: #fff;
 	border-radius: 3px;
 }
+.cat-nav {
+	margin-bottom: 1em;
+}
 .loop-wrap article {
     margin-bottom: 2em;
 }
