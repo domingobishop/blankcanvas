@@ -21,6 +21,26 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
+                            <div class="cat-nav">
+                                <?php $categories = get_categories( array(
+                                    'orderby' => 'name',
+                                    'parent'  => 0
+                                ) );
+
+                                foreach ( $categories as $category ) {
+                                    if ( is_category( $category ) ) {
+                                        $current_category = 'btn-primary';
+                                    } else {
+                                        $current_category = '';
+                                    }
+                                    printf( '<a href="%1$s" class="btn btn-default ' . $current_category . '">%2$s</a> ',
+                                        esc_url( get_category_link( $category->term_id ) ),
+                                        esc_html( $category->name )
+                                    );
+                                } ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-3">
                             <div class="loop-wrap">
                                 <?php if (have_posts()) : ?>
                                     <?php /* The loop */ ?>
