@@ -1,10 +1,10 @@
 /*
-Theme Name:     Blank Canvas beta
+Theme Name:     Blank Canvas 2017
 Theme URI:      http://chrisbishop.me.uk/resources/
 Author:         Chris Bishop
 Description:    A 'blank canvas' with Bootstrap for developing WordPress themes. 
 Author URI:     http://chrisbishop.me.uk/
-Version:        0.1.0
+Version:        0.3.0 beta
 License:		Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes.
 Text Domain:    blankcanvas
 */
@@ -18,15 +18,28 @@ body {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif, sansserif;
 	/*The weights are 300 (light), 400 (normal), 600 (semibold), and 700 (bold) and the only acceptable CSS keyword is "normal". */
 	text-rendering: optimizeLegibility;
-	color: #444;
+	color: #222;
 	font-size: 18px;
 	line-height: 1.6;
 }
-html, button, input, select, textarea {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
-}
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+	color: #000;
+	font-family: 'Zilla Slab Highlight', Helvetica, Arial, sans-serif, sansserif;
+}
+h1 {
+	font-size: 50px;
+}
+h2 {
+	font-size: 42px;
+}
+h3 {
+	font-size: 36px;
+}
+h1 {
+	margin: 2.6em 0 0.6em;
+}
+p {
+	margin: 0 0 1.6em;
 }
 a {
 	color: #337ab7;
@@ -73,18 +86,16 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
 .navbar {
 	margin: 0;
 	text-transform: uppercase;
-	font-weight: 500;
 	border-radius: 0;
 	border: none;
-	background-color: #fff;
-    box-shadow: 0px 5px 14px #444;
+	background-color: transparent;
 }
 .navbar-nav>li>a {
 	padding-bottom: 15.5px;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
-	border-bottom: solid 4px #fff;
+	border-top: solid 4px transparent;
 }
 .navbar-default .navbar-brand {
     font-weight: 700;
@@ -98,10 +109,10 @@ h1, h2, h3, h4, p, ul, li, ol, dl, blockquote, .post-statement, .statement {
 }
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-	border-bottom: solid 4px #3b94d9;
+	border-top: solid 4px #3b94d9;
 }
 .navbar-default .navbar-nav > li.current-menu-item > a {
-	border-bottom: solid 4px #3b94d9;
+	border-top: solid 4px #3b94d9;
 }
 
 /**
@@ -124,7 +135,7 @@ footer ul {
 	list-style-type: none;
 	padding: 0;
 }
-footer .bc-info {
+footer .site-info {
 	padding: 1em;
 }
 
@@ -133,16 +144,8 @@ footer .bc-info {
  * ----------------------------------------------------------------------------
  */
 
-.bc-banner {
-	background: url('img/bg.jpg') #e4eaea center center;
-	background-size: cover;
-	min-height: 180px;
-}
-.banner-title {
-	margin: 2em 0 3em;
-	padding: 0.5em 1em;
-	background: rgba(255,255,255,0.8);
-	border-radius: 3px;
+.banner h3 {
+	margin: 0.6em 0 1.6em;
 }
 .cat-nav {
 	margin-bottom: 1em;
@@ -188,10 +191,6 @@ footer .bc-info {
  * Page & Posts
  * ----------------------------------------------------------------------------
  */
-
-.bc-content {
-    padding: 2em 0;
-}
 
  /**
  * Images
