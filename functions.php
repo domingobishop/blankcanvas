@@ -2,10 +2,10 @@
 
 // Enqueue styles and scripts
 function bc_styles() {
-    wp_register_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7', 'all' );
+    wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all' );
     wp_register_style( 'bc-styles', get_template_directory_uri() . '/style.css', array(), 1.0, 'all' );
     wp_register_style( 'google-fonts',
-        'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic', array(), 1.0, 'all' );
+        'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Zilla+Slab+Highlight', array(), 1.0, 'all' );
     wp_enqueue_style( 'bootstrap' );
     wp_enqueue_style( 'bc-styles' );
     wp_enqueue_style( 'google-fonts' );
@@ -26,6 +26,8 @@ add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu() {
   register_nav_menu( 'primary', __( 'Navigation Menu', 'blankcanvas' ) );
 }
+
+add_theme_support( 'post-thumbnails' );
 
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
@@ -75,4 +77,11 @@ function excerpt($limit) {
     }
     $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
     return $excerpt;
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="btn btn-default"';
 }
