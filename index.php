@@ -7,9 +7,9 @@
                     <h1>
                         <?php bloginfo('name'); ?>
                     </h1>
-                    <h3>
+                    <p>
                         <?php bloginfo('description'); ?>
-                    </h3>
+                    </p>
                 </div>
             </div>
         </div>
@@ -47,10 +47,9 @@
             ?>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="loop-wrap">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="cards">
                             <?php if (have_posts()) : ?>
-                                <?php /* The loop */ ?>
                                 <?php while (have_posts()) : the_post(); ?>
                                     <article id="post-<?php the_ID(); ?>">
                                         <?php if (has_post_thumbnail() && !post_password_required() && !is_attachment()) : ?>
@@ -60,27 +59,29 @@
                                                 </a>
                                             </div>
                                         <?php endif; ?>
-                                        <div class="entry-content-loop">
-                                            <h2 class="entry-title">
-                                                <a href="<?php the_permalink(); ?>" rel="bookmark">
-                                                    <?php the_title(); ?>
-                                                </a>
-                                            </h2>
+                                        <div class="entry-content">
+                                            <div class="entry-header">
+                                                <h2>
+                                                    <a href="<?php the_permalink(); ?>" rel="bookmark">
+                                                        <?php the_title(); ?>
+                                                    </a>
+                                                </h2>
+                                            </div>
                                             <div class="entry-summary">
                                                 <p><?php echo excerpt(32) ; ?></p>
                                             </div>
-                                            <a href="<?php the_permalink(); ?>" class="btn-sm btn-default">Read more</a>
+                                            <div class="entry-btn">
+                                                <a href="<?php the_permalink(); ?>" class="btn-sm btn-default">Read more</a>
+                                            </div>
                                         </div>
                                     </article>
                                 <?php endwhile; ?>
                             <?php else : ?>
                                 <h1>No content</h1>
                             <?php endif; ?>
-                            <nav>
-                                <ul class="pager">
-                                    <li class="previous"><?php next_posts_link( '&#8249; Older posts' ); ?></li>
-                                    <li class="next"><?php previous_posts_link( 'Newer posts &#8250;' ); ?></li>
-                                </ul>
+                            <nav class="paged-posts clearfix">
+                                    <div class="previous"><?php next_posts_link( '&#8249; Older posts' ); ?></div>
+                                    <div class="next"><?php previous_posts_link( 'Newer posts &#8250;' ); ?></div>
                             </nav>
                         </div>
                     </div>
