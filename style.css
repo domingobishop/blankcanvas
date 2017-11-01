@@ -23,12 +23,9 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    color: #337ab7;
-    font-family: 'Zilla Slab Highlight', Helvetica, Arial, sans-serif, sansserif;
-}
 h1, h2, h3, h4, h5, h6 {
     margin: 1.6em 0 1em;
+    font-weight: 700;
 }
 
 h1 {
@@ -43,8 +40,13 @@ h3 {
     font-size: 2em;
 }
 
+h4 {
+    font-weight: 700;
+}
+
 .entry-header h1 {
-    margin: 2.6em 0 0.6em;
+    margin: 2.4em 0 1.6em;
+    font-size: 2.4em;
 }
 
 p {
@@ -68,6 +70,34 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+ul {
+    margin-bottom: 1.6em;
+}
+
+.page .entry-content, .single .entry-content {
+    min-height: 360px;
+}
+
+/**
+ * Forms
+ * ----------------------------------------------------------------------------
+ */
+
+.contact-form textarea,
+.contact-form input[type=email], .contact-form input[type=text] {
+    width: 98%;
+    max-width: 98%;
+    margin-bottom: 1.9em;
+}
+.contact-form input[type=checkbox], .contact-form input[type=radio] {
+    float: left !important;
+    position: relative;
+    margin: 7px 1em 1em 0 !important;
+}
+.contact-form label.checkbox, .contact-form label.radio {
+    margin-bottom: 1.6em !important;
+}
+
 /**
  * Nav
  * ----------------------------------------------------------------------------
@@ -78,7 +108,7 @@ a:hover, a:focus {
     text-transform: uppercase;
     border-radius: 0;
     border: none;
-    background-color: transparent;
+    background: #eee;
 }
 
 .navbar-nav > li > a {
@@ -175,6 +205,11 @@ nav .next {
  * ----------------------------------------------------------------------------
  */
 
+.cards h1, .cards h2 {
+    color: #337ab7;
+    font-family: 'Zilla Slab Highlight', Helvetica, Arial, sans-serif, sansserif;
+}
+
 .cards article {
     margin-bottom: 2em;
 }
@@ -186,6 +221,10 @@ nav .next {
 .cards .entry-content {
     padding-bottom: 1em;
     background-color: #e4eaea;
+}
+
+.cards .entry-header {
+    padding-right: 2em;
 }
 
 .cards .entry-summary, .cards .entry-btn {
