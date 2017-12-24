@@ -1,5 +1,5 @@
 <?php
-
+// Blankcanvas functions
 // Enqueue styles and scripts
 function bc_styles() {
     wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all' );
