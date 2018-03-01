@@ -1,6 +1,27 @@
 <?php get_header(); ?>
 
-    <?php while (have_posts()) : the_post(); ?>
+    <?php while (have_posts()) : the_post();
+
+    global $post;
+
+
+
+    $meta =  get_post_meta($post->ID, '_wpsc_product_metadata' , true);
+
+    var_export( $meta['table_rate_price'] );
+
+    $i = 0;
+    foreach ( $meta['table_rate_price']['quantity'] as $item ) {
+        echo '<br>';
+        echo $meta['table_rate_price']['quantity'][$i];
+        echo ' : ';
+        echo $meta['table_rate_price']['table_price'][$i];
+        echo '<br>';
+        $i++;
+    }
+
+
+    ?>
 
     <main id="main" class="main" role="main">
         <div class="content">
