@@ -1,12 +1,12 @@
 /*
 Theme Name:     Blank Canvas 2017
-Theme URI:      http://chrisbishop.me.uk/resources/
+Theme URI:      https://github.com/domingobishop/blankcanvas
 Author:         Chris Bishop
 Description:    A 'blank canvas' with Bootstrap for developing WordPress themes. 
-Author URI:     http://chrisbishop.me.uk/
+Author URI:     https://github.com/domingobishop
 Version:        0.3.0 beta
 License:		Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes.
-Text Domain:    blankcanvas
+Text Domain:    blank-canvas
 */
 
 /**
@@ -16,66 +16,80 @@ Text Domain:    blankcanvas
 
 body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif, sansserif;
-    /*The weights are 300 (light), 400 (normal), 600 (semibold), and 700 (bold) and the only acceptable CSS keyword is "normal". */
     text-rendering: optimizeLegibility;
     color: #222;
     font-size: 18px;
     line-height: 1.6;
 }
-
 h1, h2, h3, h4, h5, h6 {
     margin: 1.6em 0 1em;
     font-weight: 700;
 }
-
 h1 {
     font-size: 3em;
 }
-
-h2 {
-    font-size: 2.6em;
+p {
+    margin: 0 0 1.6em;
+}
+a {
+    color: #3b94d9;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+a:focus {
+    background-color: #f7ecb5;
+}
+ul {
+    margin-bottom: 1.6em;
 }
 
-h3 {
-    font-size: 2em;
-}
-
-h4 {
-    font-weight: 700;
-}
+/**
+ * Content
+ * ----------------------------------------------------------------------------
+ */
 
 .entry-header h1 {
     margin: 2.4em 0 1.6em;
     font-size: 2.4em;
 }
-
-p {
-    margin: 0 0 1.6em;
-}
-
-a {
-    color: #337ab7;
-}
-
-a:hover, a:focus {
-    color: #3b94d9;
-    text-decoration: none;
-}
-
 .entry-content a {
     text-decoration: underline;
 }
-
 .entry-content a:hover, .entry-content a:focus {
     text-decoration: none;
 }
-
-ul {
-    margin-bottom: 1.6em;
+.header-container {
+    background-position: center center;
+    background-size: cover;
 }
-
 .page .entry-content, .single .entry-content {
-    min-height: 360px;
+    margin-bottom: 3em;
+}
+ul.buttons {
+    padding: 0;
+    text-align: center;
+}
+ul.buttons li {
+    display: inline-block;
+    list-style: none;
+}
+ul.buttons li a {
+    display: block;
+    padding: 1em 1.5em;
+    border: 2px solid #ddd;
+    text-decoration: none;
+}
+ul.buttons li a:hover {
+    background-color: #eee;
+    border: 2px solid #ccc;
+    text-decoration: underline;
+}
+.home .banner, .archive .banner, .single .entry-header, .page .entry-header {
+    padding: 1.6em;
+    color: #fff;
+    background-color: rgba(59,148,217,0.8);
+    margin-bottom: 2em;
 }
 
 /**
@@ -109,34 +123,29 @@ ul {
     border-radius: 0;
     border: none;
     background: #eee;
+    border-top: solid 4px #3b94d9;
 }
-
 .navbar-nav > li > a {
     padding-bottom: 1em;
 }
-
 .navbar-default .navbar-nav > li > a {
     color: #000;
     border-top: solid 4px transparent;
 }
-
 .navbar-default .navbar-brand {
     font-weight: 700;
     color: #000;
 }
-
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: #3b94d9;
 }
-
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     border-top: solid 4px #3b94d9;
 }
-
 .navbar-default .navbar-nav > li.current-menu-item > a {
     border-top: solid 4px #3b94d9;
 }
@@ -150,12 +159,10 @@ footer {
     padding: 1em 0;
     background-color: #e4eaea;
 }
-
 footer ul {
     list-style-type: none;
     padding: 0;
 }
-
 footer .site-info {
     padding: 1em;
 }
@@ -205,30 +212,13 @@ nav .next {
  * ----------------------------------------------------------------------------
  */
 
-.cards h1, .cards h2 {
-    color: #337ab7;
-    font-family: 'Zilla Slab Highlight', Helvetica, Arial, sans-serif, sansserif;
-}
-
 .cards article {
     margin-bottom: 2em;
 }
 
-.cards h2 {
-    margin: 0 0 0.5em;
-}
-
 .cards .entry-content {
+    border-top: solid 4px #3b94d9;
     padding-bottom: 1em;
-    background-color: #e4eaea;
-}
-
-.cards .entry-header {
-    padding-right: 2em;
-}
-
-.cards .entry-summary, .cards .entry-btn {
-    padding: 0 1em;
 }
 
 .cards .entry-thumbnail {

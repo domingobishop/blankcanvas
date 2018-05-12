@@ -59,7 +59,7 @@
                                                 </a>
                                             </div>
                                         <?php endif; ?>
-                                        <div class="entry-content">
+                                        <div class="entry-content clearfix">
                                             <div class="entry-header">
                                                 <h2>
                                                     <a href="<?php the_permalink(); ?>" rel="bookmark">
@@ -69,9 +69,6 @@
                                             </div>
                                             <div class="entry-summary">
                                                 <p><?php echo excerpt(32) ; ?></p>
-                                            </div>
-                                            <div class="entry-btn">
-                                                <a href="<?php the_permalink(); ?>" class="btn-sm btn-default">Read more</a>
                                             </div>
                                         </div>
                                     </article>
