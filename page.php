@@ -5,15 +5,7 @@
     <main id="main" class="main" role="main">
         <div class="content">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="entry-header clearfix text-center">
-                            <h1>
-                                <?php the_title(); ?>
-                            </h1>
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part( 'partials/header-banner' ); ?>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">

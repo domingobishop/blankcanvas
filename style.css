@@ -59,7 +59,10 @@ ul {
 .entry-content a:hover, .entry-content a:focus {
     text-decoration: none;
 }
-
+.header-container {
+    background-position: center center;
+    background-size: cover;
+}
 .page .entry-content, .single .entry-content {
     margin-bottom: 3em;
 }
@@ -81,6 +84,12 @@ ul.buttons li a:hover {
     background-color: #eee;
     border: 2px solid #ccc;
     text-decoration: underline;
+}
+.home .banner, .archive .banner, .single .entry-header, .page .entry-header {
+    padding: 1.6em;
+    color: #fff;
+    background-color: rgba(59,148,217,0.8);
+    margin-bottom: 2em;
 }
 
 /**
@@ -224,18 +233,6 @@ nav .next {
 
 .cards .entry-content a {
     text-decoration: none;
-}
-
-/**
-* Single
-* ----------------------------------------------------------------------------
-*/
-
-.home .banner, .archive .banner, .single .entry-header, .page .entry-header {
-    padding: 1.6em;
-    color: #fff;
-    background-color: #3b94d9;
-    margin-bottom: 2em;
 }
 
 /**
